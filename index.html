@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game News</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #00ffff;
+      font-size: 2rem;
+    }
+
+    .news {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .news-item {
+      background: #222;
+      border-left: 4px solid #00ffff;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    .news-item h3 {
+      margin-top: 0;
+      color: #00ffff;
+    }
+
+    footer {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    a.button {
+      padding: 12px 20px;
+      background: #00ffff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    a.button:hover {
+      background: #00cccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .news-item {
+        font-size: 0.95rem;
+      }
+      a.button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Game News Portal</h1>
+  </header>
+
+  <div class="news">
+    <div class="news-item">
+      <h3>🔥 Обновление 1.2!</h3>
+      <p>Новые карты, улучшения графики и исправленные ошибки.</p>
+    </div>
+    <div class="news-item">
+      <h3>⚔️ Турнир в эти выходные!</h3>
+      <p>Участвуй и выиграй награды. Подробности в Telegram!</p>
+    </div>
+  </div>
+
+  <footer>
+    <a class="button" href="https://t.me/yourchannel" target="_blank">Telegram</a>
+    <a class="button" href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
+    <a class="button" href="https://example.com/download" target="_blank">Скачать игру</a>
+    <a class="button" href="https://example.com/register" target="_blank">Регистрация</a>
+  </footer>
+</body>
+</html>

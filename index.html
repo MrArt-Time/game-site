@@ -1,7 +1,8 @@
 !DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TimeZero — Новости</title>
   <style>
     body {
@@ -20,21 +21,11 @@
       position: relative;
     }
 
-    .banner .login-btn {
-      position: absolute;
-      top: 60%;
-      left: 30%;
-      transform: translateY(-50%);
-    }
-
+    .banner .login-btn,
     .banner .register-btn {
       position: absolute;
       top: 60%;
-      right: 30%;
       transform: translateY(-50%);
-    }
-
-    .banner a {
       background: rgba(255, 255, 255, 0.25);
       border: 2px solid rgba(255, 255, 255, 0.6);
       color: white;
@@ -43,8 +34,16 @@
       text-decoration: none;
       font-size: 15px;
       border-radius: 6px;
-      transition: all 0.3s ease;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .banner .login-btn {
+      left: 30%;
+    }
+
+    .banner .register-btn {
+      right: 30%;
     }
 
     .banner a:hover {
@@ -61,34 +60,12 @@
       border-right: 1px solid #c5b58f;
     }
 
-    .sidebar div {
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 960px;
-      margin-left: 220px;
-      background: #fefcf7;
-      padding: 20px;
-    }
-
-    .news {
-      background: #fffdf7;
-      border: 1px solid #c5b58f;
-      padding: 15px;
-      margin-top: 20px;
-    }
-
-    .news h2 {
-      color: #9b1212;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .news p {
-      font-size: 14px;
-      line-height: 1.5;
+    .sidebar-heading {
+      font-size: 11px;
+      color: #7b5b36;
+      margin: 10px 0 4px 0;
+      padding-top: 6px;
+      border-top: 1px solid #d8caaa;
     }
 
     .sidebar-btn {
@@ -122,21 +99,35 @@
       background: #a00000;
     }
 
-    .sidebar-heading {
-      font-size: 11px;
-      color: #7b5b36;
-      margin: 10px 0 4px 0;
-      padding-top: 6px;
-      border-top: 1px solid #d8caaa;
+    .container {
+      max-width: 960px;
+      margin-left: 220px;
+      background: #fefcf7;
+      padding: 20px;
     }
 
-    .sidebar-social .sidebar-btn {
-      margin-bottom: 4px;
+    .news {
+      background: #fffdf7;
+      border: 1px solid #c5b58f;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    .news h2 {
+      color: #9b1212;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .news p {
+      font-size: 14px;
+      line-height: 1.5;
     }
   </style>
 </head>
-body>
-  <div class="banner" style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...');">
+<body>
+
+  <div class="banner">
     <a href="#" class="login-btn">Войти</a>
     <a href="#" class="register-btn">Регистрация</a>
   </div>
@@ -149,10 +140,8 @@ body>
     <a href="#" class="sidebar-btn red">Играть</a>
 
     <div class="sidebar-heading">Соцсети</div>
-    <div class="sidebar-social">
-      <a href="#" class="sidebar-btn">ВКонтакте</a>
-      <a href="#" class="sidebar-btn">Telegram</a>
-    </div>
+    <a href="#" class="sidebar-btn">ВКонтакте</a>
+    <a href="#" class="sidebar-btn">Telegram</a>
   </div>
 
   <div class="container">
@@ -162,14 +151,10 @@ body>
     </div>
 
     <div class="news">
-      <h2>Последнее обновление</h2>
-      <p>Добавлены новые квесты, переработан интерфейс, исправлены ошибки. Мы продолжаем развивать игру!</p>
+      <h2>Обновление: Новые возможности</h2>
+      <p>Мы добавили новые функции в игру, включая переработанную систему боя, улучшенный интерфейс и поддержку мобильных устройств.</p>
     </div>
-    <div class="news">
-      <h2>Обновление: Новые возможности TimeZero</h2>
-      <p>Мы добавили новые функции в игру, включая переработанную систему боя, улучшенный интерфейс и поддержку мобильных устройств. Ознакомьтесь с подробностями в нашем блоге!</p>
-    </div>
+  </div>
 
-  </div> <!-- конец .container -->
 </body>
 </html>

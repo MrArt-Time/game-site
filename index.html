@@ -1,108 +1,175 @@
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game News</title>
+  <meta charset="utf-8"/>
+  <title>TimeZero — Новости</title>
   <style>
     body {
+      background-color: #f4ecd3;
+      font-family: Verdana, sans-serif;
+      color: #3b2b1c;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
+      padding: 0;
     }
 
-    header {
-      background: #1a1a1a;
+    .banner {
+      background-image: url('timezero_banner_modern.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      position: relative;
+    }
+
+    .banner .login-btn {
+      position: absolute;
+      top: 60%;
+      left: 30%;
+      transform: translateY(-50%);
+    }
+
+    .banner .register-btn {
+      position: absolute;
+      top: 60%;
+      right: 30%;
+      transform: translateY(-50%);
+    }
+
+    .banner a {
+      background: rgba(255, 255, 255, 0.25);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      color: white;
+      font-weight: bold;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 15px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .banner a:hover {
+      background: rgba(255, 255, 255, 0.4);
+      border-color: white;
+      transform: scale(1.05);
+    }
+
+    .sidebar {
+      width: 200px;
+      float: left;
       padding: 20px;
-      text-align: center;
+      background: #fef7e7;
+      border-right: 1px solid #c5b58f;
     }
 
-    h1 {
-      margin: 0;
-      color: #00ffff;
-      font-size: 2rem;
+    .sidebar div {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 960px;
+      margin-left: 220px;
+      background: #fefcf7;
+      padding: 20px;
     }
 
     .news {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .news-item {
-      background: #222;
-      border-left: 4px solid #00ffff;
+      background: #fffdf7;
+      border: 1px solid #c5b58f;
       padding: 15px;
-      border-radius: 6px;
+      margin-top: 20px;
     }
 
-    .news-item h3 {
-      margin-top: 0;
-      color: #00ffff;
+    .news h2 {
+      color: #9b1212;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
 
-    footer {
-      background: #1a1a1a;
-      padding: 20px;
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+    .news p {
+      font-size: 14px;
+      line-height: 1.5;
     }
 
-    a.button {
-      padding: 12px 20px;
-      background: #00ffff;
-      color: #000;
+    .sidebar-btn {
+      display: block;
+      background: #fdf3d7;
+      color: #5a3512;
       text-decoration: none;
-      border-radius: 6px;
+      padding: 8px 10px;
+      margin-bottom: 6px;
+      border: 1px solid #d2c3a4;
+      border-radius: 3px;
+      font-size: 12px;
       font-weight: bold;
-      transition: background 0.3s;
+      text-transform: uppercase;
+      box-shadow: inset 0 1px 0 #fff;
     }
 
-    a.button:hover {
-      background: #00cccc;
+    .sidebar-btn:hover {
+      background: #f8e8c1;
+      border-color: #c6b388;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-      .news-item {
-        font-size: 0.95rem;
-      }
-      a.button {
-        width: 100%;
-        max-width: 300px;
-      }
+    .sidebar-btn.red {
+      background: #cc0000;
+      color: white;
+      border-color: #a00000;
+      text-align: center;
+    }
+
+    .sidebar-btn.red:hover {
+      background: #a00000;
+    }
+
+    .sidebar-heading {
+      font-size: 11px;
+      color: #7b5b36;
+      margin: 10px 0 4px 0;
+      padding-top: 6px;
+      border-top: 1px solid #d8caaa;
+    }
+
+    .sidebar-social .sidebar-btn {
+      margin-bottom: 4px;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Game News Portal</h1>
-  </header>
+body>
+  <div class="banner" style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...');">
+    <a href="#" class="login-btn">Войти</a>
+    <a href="#" class="register-btn">Регистрация</a>
+  </div>
 
-  <div class="news">
-    <div class="news-item">
-      <h3>🔥 Обновление 1.2!</h3>
-      <p>Новые карты, улучшения графики и исправленные ошибки.</p>
-    </div>
-    <div class="news-item">
-      <h3>⚔️ Турнир в эти выходные!</h3>
-      <p>Участвуй и выиграй награды. Подробности в Telegram!</p>
+  <div class="sidebar">
+    <div class="sidebar-heading">Меню</div>
+    <a href="#" class="sidebar-btn">Главная</a>
+    <a href="#" class="sidebar-btn">Новости</a>
+    <a href="#" class="sidebar-btn">Форум</a>
+    <a href="#" class="sidebar-btn red">Играть</a>
+
+    <div class="sidebar-heading">Соцсети</div>
+    <div class="sidebar-social">
+      <a href="#" class="sidebar-btn">ВКонтакте</a>
+      <a href="#" class="sidebar-btn">Telegram</a>
     </div>
   </div>
 
-  <footer>
-    <a class="button" href="https://t.me/yourchannel" target="_blank">Telegram</a>
-    <a class="button" href="https://youtube.com/yourchannel" target="_blank">YouTube</a>
-    <a class="button" href="https://example.com/download" target="_blank">Скачать игру</a>
-    <a class="button" href="https://example.com/register" target="_blank">Регистрация</a>
-  </footer>
+  <div class="container">
+    <div class="news">
+      <h2>Добро пожаловать в TimeZero</h2>
+      <p>TimeZero — это культовая онлайн-игра, действие которой происходит в постапокалиптическом мире. Присоединяйтесь к тысячам игроков в борьбе за выживание!</p>
+    </div>
+
+    <div class="news">
+      <h2>Последнее обновление</h2>
+      <p>Добавлены новые квесты, переработан интерфейс, исправлены ошибки. Мы продолжаем развивать игру!</p>
+    </div>
+    <div class="news">
+      <h2>Обновление: Новые возможности TimeZero</h2>
+      <p>Мы добавили новые функции в игру, включая переработанную систему боя, улучшенный интерфейс и поддержку мобильных устройств. Ознакомьтесь с подробностями в нашем блоге!</p>
+    </div>
+
+  </div> <!-- конец .container -->
 </body>
 </html>

@@ -2,160 +2,67 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TimeZero — Новости</title>
-  <link rel="icon" type="image/png" href="https://i.imgur.com/nD3GQ9b.png" />
   <style>
     body {
-      background-color: #f4ecd3;
-      font-family: Verdana, sans-serif;
-      color: #3b2b1c;
       margin: 0;
-      padding: 0;
+      font-family: Verdana, sans-serif;
+      background-color: #f4ecd3;
+      color: #3b2b1c;
     }
-
     .banner {
-      background-image: url('https://i.imgur.com/4g5IGIv.jpeg');
+      background-image: url('timezero_banner_modern.jpg');
       background-size: cover;
       background-position: center;
-      height: 250px;
+      height: 200px;
       position: relative;
-    }
-
-    .banner .login-btn,
-    .banner .register-btn {
-      position: absolute;
-      top: 60%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.25);
-      border: 2px solid rgba(255, 255, 255, 0.6);
+      text-align: center;
       color: white;
-      font-weight: bold;
-      padding: 8px 16px;
-      text-decoration: none;
-      font-size: 15px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
     }
-
-    .banner .login-btn {
-      left: 30%;
+    .banner h1 {
+      padding-top: 60px;
+      font-size: 32px;
+      text-shadow: 1px 1px 4px black;
     }
-
-    .banner .register-btn {
-      right: 30%;
-    }
-
-    .banner a:hover {
-      background: rgba(255, 255, 255, 0.4);
-      border-color: white;
-      transform: scale(1.05);
-    }
-
     .sidebar {
       width: 200px;
       float: left;
-      padding: 20px;
       background: #fef7e7;
-      border-right: 1px solid #c5b58f;
-    }
-
-    .sidebar-heading {
-      font-size: 11px;
-      color: #7b5b36;
-      margin: 10px 0 4px 0;
-      padding-top: 6px;
-      border-top: 1px solid #d8caaa;
-    }
-
-    .sidebar-btn {
-      display: block;
-      background: #fdf3d7;
-      color: #5a3512;
-      text-decoration: none;
-      padding: 8px 10px;
-      margin-bottom: 6px;
-      border: 1px solid #d2c3a4;
-      border-radius: 3px;
-      font-size: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      box-shadow: inset 0 1px 0 #fff;
-    }
-
-    .sidebar-btn:hover {
-      background: #f8e8c1;
-      border-color: #c6b388;
-    }
-
-    .sidebar-btn.red {
-      background: #cc0000;
-      color: white;
-      border-color: #a00000;
-      text-align: center;
-    }
-
-    .sidebar-btn.red:hover {
-      background: #a00000;
-    }
-
-    .container {
-      max-width: 960px;
-      margin-left: 220px;
-      background: #fefcf7;
       padding: 20px;
+      box-sizing: border-box;
     }
-
+    .sidebar a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #5a3512;
+      font-weight: bold;
+    }
+    .container {
+      margin-left: 220px;
+      padding: 20px;
+      background: #fefcf7;
+    }
     .news {
-      background: #fffdf7;
-      border: 1px solid #c5b58f;
+      background: white;
       padding: 15px;
-      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #c5b58f;
     }
-
     .news h2 {
       color: #9b1212;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .news p {
-      font-size: 14px;
-      line-height: 1.5;
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
 
   <div class="banner">
-    <a href="#" class="login-btn">Войти</a>
-    <a href="#" class="register-btn">Регистрация</a>
+    <h1>Новости TimeZero</h1>
   </div>
 
   <div class="sidebar">
-    <div class="sidebar-heading">Меню</div>
-    <a href="#" class="sidebar-btn">Главная</a>
-    <a href="#" class="sidebar-btn">Новости</a>
-    <a href="#" class="sidebar-btn">Форум</a>
-    <a href="#" class="sidebar-btn red">Играть</a>
-
-    <div class="sidebar-heading">Соцсети</div>
-    <a href="#" class="sidebar-btn">ВКонтакте</a>
-    <a href="#" class="sidebar-btn">Telegram</a>
-  </div>
-
-  <div class="container">
-    <div class="news">
-      <h2>Добро пожаловать в TimeZero</h2>
-      <p>TimeZero — это культовая онлайн-игра, действие которой происходит в постапокалиптическом мире. Присоединяйтесь к тысячам игроков в борьбе за выживание!</p>
-    </div>
-
-    <div class="news">
-      <h2>Обновление: Новые возможности TimeZero</h2>
-      <p>Мы добавили новые функции в игру, включая переработанную систему боя, улучшенный интерфейс и поддержку мобильных устройств. Ознакомьтесь с подробностями в нашем блоге!</p>
-    </div>
-  </div>
-
-</body>
-</html>
+    <a href="#">Главная</a>
+    <a href="#">Форум</a>
+    <a href="#">Рейтинг</a>
+    <a href

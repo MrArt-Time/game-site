@@ -1,88 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>TimeZero — Новости</title>
-    <style>
-      body {
-        background-color: #f4ecd3;
-        font-family: Verdana, sans-serif;
-        color: #3b2b1c;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <title>TimeZero — Новости</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, sans-serif;
+      background-color: #f4ecd3;
+      color: #3b2b1c;
+    }
 
-      .banner {
-        background-image: url('timezero_banner_modern.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 200px;
-        position: relative;
-      }
+    .banner {
+      background-image: url('timezero_banner_modern.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      position: relative;
+    }
 
-      .banner .login-btn,
-      .banner .register-btn {
-        background-color: transparent;
-        color: white;
-        border: 2px solid white;
-        padding: 6px 14px;
-        border-radius: 6px;
-        font-size: 14px;
-        text-decoration: none;
-        cursor: pointer;
-        margin-right: 8px;
-        position: absolute;
-        top: 60%;
-        transform: translateY(-50%);
-      }
+    .banner .login-btn,
+    .banner .register-btn {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 2px solid #3b2b1c;
+      color: #3b2b1c;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-      .banner .login-btn {
-        left: 5%;
-      }
+    .banner .login-btn {
+      left: 5%;
+    }
 
-      .banner .register-btn {
-        right: 5%;
-      }
+    .banner .register-btn {
+      right: 5%;
+    }
 
-      .sidebar {
-        width: 200px;
-        float: left;
-        background-color: #3b2b1c;
-        padding: 10px;
-      }
+    .sidebar {
+      width: 200px;
+      float: left;
+      background-color: #3b2b1c;
+      padding: 10px;
+      height: calc(100vh - 200px);
+    }
 
-      .sidebar a {
-        display: block;
-        padding: 10px;
-        margin-bottom: 5px;
-        text-decoration: none;
-        color: white;
-        border-radius: 4px;
-      }
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-      .sidebar a.red {
-        background-color: #cc0000;
-      }
-
-      .sidebar a.blue {
-        background-color: #0033cc;
-      }
-
-      .sidebar a.gold {
-        background-color: #d4af37;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="banner">
-      <a class="login-btn" href="#">Скачать игру</a>
-      <a class="register-btn" href="#">Регистрация</a>
-    </div>
-
-    <div class="sidebar">
-      <a class="sidebar-btn red" href="https://youtube.com">YouTube</a>
-      <a class="sidebar-btn blue" href="https://t.me">Telegram</a>
-      <a class="sidebar-btn gold" href="#">Купить золото</a>
-    </div>
-  </body>
-</html>
+    .sidebar a.red {
+      background-color

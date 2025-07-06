@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8"/>
   <title>TimeZero — Новости</title>
   <style>
     body {
-      margin: 0;
-      font-family: Verdana, sans-serif;
       background-color: #f4ecd3;
+      font-family: Verdana, sans-serif;
       color: #3b2b1c;
+      margin: 0;
+      padding: 0;
     }
     .banner {
       background-image: url('timezero_banner_modern.jpg');
@@ -16,53 +17,26 @@
       background-position: center;
       height: 200px;
       position: relative;
-      text-align: center;
-      color: white;
     }
-    .banner h1 {
-      padding-top: 60px;
-      font-size: 32px;
-      text-shadow: 1px 1px 4px black;
+    .banner .login-btn {
+      position: absolute;
+      top: 60%;
+      left: 5%;
+      transform: translateY(-50%);
     }
-    .sidebar {
-      width: 200px;
-      float: left;
-      background: #fef7e7;
-      padding: 20px;
-      box-sizing: border-box;
+    .banner .register-btn {
+      position: absolute;
+      top: 60%;
+      right: 5%;
+      transform: translateY(-50%);
     }
-    .sidebar a {
-      display: block;
-      margin-bottom: 10px;
-      text-decoration: none;
-      color: #5a3512;
+    .banner a {
+      background-color: transparent;
+      border: 2px solid red;
+      color: red;
       font-weight: bold;
+      padding: 6px 14px;
+      text-decoration: none;
+      font-size: 14px;
+      background: rgba(255,255,255,0.05);
     }
-    .container {
-      margin-left: 220px;
-      padding: 20px;
-      background: #fefcf7;
-    }
-    .news {
-      background: white;
-      padding: 15px;
-      margin-bottom: 20px;
-      border: 1px solid #c5b58f;
-    }
-    .news h2 {
-      color: #9b1212;
-      margin-top: 0;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="banner">
-    <h1>Новости TimeZero</h1>
-  </div>
-
-  <div class="sidebar">
-    <a href="#">Главная</a>
-    <a href="#">Форум</a>
-    <a href="#">Рейтинг</a>
-    <a href

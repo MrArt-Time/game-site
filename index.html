@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>TimeZero — Входящие</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f1e6;
+      margin: 0;
+      padding: 20px;
+    }
 
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #b22222;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border-bottom: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2e8d8;
+      color: #333;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 16px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-delete {
+      background-color: #d9534f;
+      color: white;
+    }
+
+    .btn-new {
+      background-color: #5cb85c;
+      color: white;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    .modal-content input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+
+    .modal-content button {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📬 Входящие сообщения</h1>
+
+    <table id="messageTable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Отправитель</th>
+          <th>Тема</th>
+          <th>Дата</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>🛡️ BlackScorpion</td>
+          <td>Новый квест доступен</td>
+          <td>07.07.2025</td>
+          <td><a href="#">Открыть</a></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>🧑‍💼 Admin</td>
+          <td>Сброс пароля</td>
+          <td>06.07.2025</td>
+          <td><a href="#">Открыть</a></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>🤝 Templar</td>
+          <td>Торговля и обмен</td>
+          <td>05.07.2025</td>
+          <td><a href="#">Открыть</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="buttons">
+      <button class="btn-delete" onclick="deleteSelected()">🗑 Удалить выбранные</button>
+      <button class="btn-new" onclick="openModal()">✉️ Новое сообщение</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Новое сообщение</h3>
+      <input type="text" id="sender" placeholder="Отправитель" />
+      <input type="text" id="subject" placeholder="Тема" />
+      <input type="date" id="date" />
+      <button onclick="addMessage()">Добавить</button>
+    </div>
+  </div>
+
+  <script>
+    function deleteSelected() {
+      const table = document.getElementById("messageTable").getElementsByTagName("tbody")[0];
+      const rows = table.getElementsByTagName("tr");
+      for (let i = rows.length - 1; i >= 0; i--) {
+        const checkbox = rows[i].querySelector("input[type='checkbox']");
+        if (checkbox && checkbox.checked) {
+          table.deleteRow(i);
+        }
+      }
+    }
+
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function addMessage() {
+      const sender = document.getElementById("sender").value;
+      const subject = document.getElementById("subject").value;
+      const date = document.getElementById("date").value;
+
+      if (!sender || !subject || !date) {
+        alert("Пожалуйста, заполните все поля.");
+        return;
+      }
+
+      const table = document.getElementById("messageTable").getElementsByTagName("tbody")[0];
+      const newRow = table.insertRow(0);
+      newRow.innerHTML = `
+        <td><input type="checkbox" /></td>
+        <td>${sender}</td>
+        <td>${subject}</td>
+        <td>${date}</td>
+        <td><a href="#">Открыть</a></td>
+      `;
+
+      document.getElementById("sender").value = "";
+      document.getElementById("subject").value = "";
+      document.getElementById("date").value = "";
+      document.getElementById("modal").style.display = "none";
+    }
+
+    // Закрытие модального окна по клику вне окна
+    window.onclick = function(event) {
+      const modal = document.getElementById("modal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
